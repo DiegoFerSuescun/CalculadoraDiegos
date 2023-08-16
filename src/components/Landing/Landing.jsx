@@ -11,11 +11,11 @@ export default function Landing(props){
             <input className="form-control my-2" type="text" placeholder="Correo" />
             <input className="form-control my-2" type="password" placeholder="Contraseña" />
             <div className="d-grid gap-2">
-                <button className="btn btn-primary my-2">Loguearte</button>
+                <button className="btn btn-primary my-2">Enter</button>
             </div>
             <div>
                 <p className="mt-3">Olvidaste tu contraseña</p>
-                <button className="btn btn-link">pulsa aca para reiniciar tu contraseña</button>
+                <button className="btn btn-link">Pulsa acá para reiniciar tu contraseña</button>
             </div>
             <div className="mt-4">
                 <button className="btn btn-danger">
