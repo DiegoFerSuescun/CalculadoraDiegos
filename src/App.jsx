@@ -10,8 +10,6 @@ function App() {
      <div>
         <Routes>
           <Route  path='/' element = {<Landing />} />  
-          <Route  path='/home' element = {<Landing />} />  
-
         </Routes>        
      </div>   
 
