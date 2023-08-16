@@ -3,23 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Calc = () => {
     
-    const [ value, setValue ]= useState('');
+    const [value, setValue] = useState('');
 
-    const handleButon = (valuebut) =>{
-        setValue( value + valuebut);
+    const handleButton = (valuebut) => {
+        setValue(value + valuebut);
     };
 
-    const handleDelete = () =>{
+    const handleDelete = () => {
         setValue(value.slice(0, -1));
     };
 
-    const handleClear= () => {
-        setValue('')
-    }
+    const handleClear = () => {
+        setValue('');
+    };
     
     return (
-        <div >
-            <div className="mb-4">
+        <div>
+            <div className="mb-1">
                 <input
                     type="text"
                     className="form-control form-control-lg"
@@ -27,8 +27,8 @@ const Calc = () => {
                     value={value}
                 />
             </div>
-            <div className="row">
-                {[1, 2, 3].map((number) => (
+            <div className="d-flex justify-content-between m-2">
+                {[1, 4, 7].map((number) => (
                     <div className="col-4" key={number}>
                         <button
                             className="btn btn-primary btn-lg mb-2"
@@ -39,8 +39,8 @@ const Calc = () => {
                     </div>
                 ))}
             </div>
-            <div className="row">
-                {[4, 5, 6].map((number) => (
+            <div className="d-flex justify-content-between m-2">
+                {[2, 5, 8].map((number) => (
                     <div className="col-4" key={number}>
                         <button
                             className="btn btn-primary btn-lg mb-2"
@@ -51,8 +51,8 @@ const Calc = () => {
                     </div>
                 ))}
             </div>
-            <div className="row">
-                {[7, 8, 9].map((number) => (
+            <div className="d-flex justify-content-between m-2">
+                {[3, 6, 9].map((number) => (
                     <div className="col-4" key={number}>
                         <button
                             className="btn btn-primary btn-lg mb-2"
@@ -84,4 +84,4 @@ const Calc = () => {
     );
 };
 
-export default Calc;
+export default Calc
