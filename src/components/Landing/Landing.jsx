@@ -15,7 +15,7 @@ export default function Landing(props){
                 <button className="btn btn-primary my-2">Enter</button>
             </div>
             <div>
-                <p className="mt-3">Olvidaste tu contraseña</p>
+                <p>Olvidaste tu contraseña</p>
                 <button className="btn btn-link">Pulsa acá para reiniciar tu contraseña</button>
             </div>
             <div className="mt-4">

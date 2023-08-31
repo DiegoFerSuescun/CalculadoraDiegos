@@ -70,8 +70,11 @@ const Calc = () => {
                     </div>
                 ))}
             </div>
+            <div className='row'>
+                <button className='btn btn-ligth btn-lg mb-6'>=</button>
+            </div>
             <div className="row">
-                <div className="col-12 text-right">
+                <div className="col-12 text-right mr-5">
                     <button className="btn btn-danger btn-lg mr-2" onClick={handleDelete}>
                         Borrar
                     </button>
