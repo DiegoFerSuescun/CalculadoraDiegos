@@ -23,6 +23,9 @@ export default function Landing(props){
                     <i className="fab fa-google me-2"></i>
                 </button>
             </div>
+            <div className="mt-4">
+            <NavLink to = "/reg" className="btn btn-link">Si deseas registrarte pulsa acá</NavLink>
+            </div>
         </div>
     )
 }
