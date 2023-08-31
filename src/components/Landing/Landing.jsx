@@ -1,26 +1,31 @@
 import React, { useState } from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import { useAuth } from "../Context/authContext";
 
 
 export default function Landing(props){
     
     const auth = useAuth();
+    const history = useNavigate();
     const [ emailLog, setEmaillog ] = useState('');
     const [ passLog, setPasslog ] = useState(' ');
 
-    const handleLogin = () =>{
-
+    const handleLogin = (e) =>{
+        e.preventDefault();
+        const reslog = auth.loginEmail(emailLog, passLog);
+        if(reslog){
+            history('/calculadora')
+        }
     };
     
     return(
         <div className="container"> 
             <h1 className="mt-5">Bienvenido a mi proyecto!!!</h1>
             <h3 className="mt-5">Ingresa:</h3>
-            <input className="form-control my-2" type="text" placeholder="Correo" />
-            <input className="form-control my-2" type="password" placeholder="Contraseña" />
+            <input className="form-control my-2" type="text" placeholder="Correo" onChange={(e) => setEmaillog(e.target.value)}/>
+            <input className="form-control my-2" type="password" placeholder="Contraseña" onChange={(e) => setPasslog(e.target.value)} />
             <div className="d-grid gap-2">
-                <button className="btn btn-primary my-2">Enter</button>
+                <button className="btn btn-primary my-2" onClick={(e)=>handleLogin(e)}>Entrar</button>
             </div>
             <div>
                 <p>Olvidaste tu contraseña</p>

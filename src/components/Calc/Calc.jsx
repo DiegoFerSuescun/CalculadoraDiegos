@@ -19,6 +19,11 @@ const Calc = () => {
     
     return (
         <div>
+            <div className="mb-1 text-end">
+                <button className="btn btn-danger" onClick={() => console.log("Salir")}>
+                    Salir
+                </button>
+            </div>
             <div className="mb-1">
                 <input
                     type="text"
