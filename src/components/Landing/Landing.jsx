@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import {NavLink} from "react-router-dom";
+import { useAuth } from "../Context/authContext";
 
 
 export default function Landing(props){
     
+    const auth = useAuth();
+    const [ emailLog, setEmaillog ] = useState('');
+    const [ passLog, setPasslog ] = useState(' ');
+
+    const handleLogin = () =>{
+
+    };
     
     return(
         <div className="container"> 
