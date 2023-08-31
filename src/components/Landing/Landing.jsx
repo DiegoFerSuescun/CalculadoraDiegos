@@ -7,7 +7,8 @@ export default function Landing(props){
     
     return(
         <div className="container"> 
-            <h1 className="mt-5">Hola Puedes loguearte</h1>
+            <h1 className="mt-5">Bienvenido a mi proyecto!!!</h1>
+            <h3 className="mt-5">Ingresa:</h3>
             <input className="form-control my-2" type="text" placeholder="Correo" />
             <input className="form-control my-2" type="password" placeholder="Contraseña" />
             <div className="d-grid gap-2">
