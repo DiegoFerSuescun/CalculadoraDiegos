@@ -17,6 +17,11 @@ export default function Landing(props){
             history('/calculadora')
         }
     };
+
+    const handleGoogle = (e) => {
+        e.preventDefault();
+        auth.loginGoogle()
+    };
     
     return(
         <div className="container"> 
@@ -32,7 +37,7 @@ export default function Landing(props){
                 <button className="btn btn-link">Pulsa acá para reiniciar tu contraseña</button>
             </div>
             <div className="mt-4">
-                <button className="btn btn-danger">
+                <button className="btn btn-danger" onClick={(e) => handleGoogle(e)}>
                     <i className="fab fa-google me-2"></i>
                 </button>
             </div>

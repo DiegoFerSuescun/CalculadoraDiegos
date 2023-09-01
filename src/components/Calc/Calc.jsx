@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useAuth } from '../Context/authContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
 const Calc = () => {
     
+    const auth = useAuth();
+    const local = useNavigate();
     const [value, setValue] = useState('');
+
 
     const handleButton = (valuebut) => {
         setValue(value + valuebut);
@@ -16,11 +21,17 @@ const Calc = () => {
     const handleClear = () => {
         setValue('');
     };
+
+    const handleLogout = () =>{
+        auth.logOut();
+        local('/')
+        
+    }
     
     return (
         <div>
             <div className="mb-1 text-end">
-                <button className="btn btn-danger" onClick={() => console.log("Salir")}>
+                <button className="btn btn-danger" onClick={() => handleLogout()}>
                     Salir
                 </button>
             </div>

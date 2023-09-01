@@ -25,10 +25,10 @@ export function AuthProvider ({children}){
     const loginGoogle = async () =>{
         const response = new GoogleAuthProvider();
         return await signInWithPopup(auth, response)
+        console.log(response);
     };
     const logOut = async () => {
         const response = await signOut(auth);
-        console.log(response);
     };
 
     return <authContext.Provider value = {{
